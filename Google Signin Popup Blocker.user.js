@@ -5,6 +5,7 @@
 // @description  Blocks DOM based Google One Tap signin popup on all sites
 // @author       theMosen
 // @match        *://*/*
+// @run-at       document-start
 // @grant        none
 // ==/UserScript==
 
@@ -51,7 +52,14 @@
     });
 
     // 4. If all else fails, hide Google iframes
-    //
+    // const style = document.createElement('style');
+    // style.textContent = `
+    //     iframe[src*="accounts.google.com/gsi/iframe"] {
+    //         display: none !important;
+    //         visibility: hidden !important;
+    //     }
+    // `;
+    // document.documentElement.appendChild(style);
 
     // Initial cleanup
     disableContainers();
